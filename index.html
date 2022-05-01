@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="script" href="script.js">
+    <title>Rock Paper Scissors console</title>
+</head>
+<body>
+    <script> 
+    function rockpaperscissors() {       
+let computerScore = 0, humanScore = 0;
+let playerSelection = prompt("rock, paper, scissors");
+console.log("human chose ", playerSelection.toLowerCase());
+let options = ["rock", "paper", "scissors"];
+let computerPlay = options[Math.floor(Math.random() * options.length)];
+console.log("computer chose ", computerPlay);
+if (playerSelection.toLowerCase() == "rock" && computerPlay == "paper") {;
+console.log("paper beats rock! You lost this round.");
+computerScore += 1;
+console.log("Computer: " + computerScore + " You: " + humanScore);
+} 
+else if (playerSelection.toLowerCase() == "rock" && computerPlay == "scissors") {
+console.log("rock beats scissors! You won this round.");
+humanScore += 1;
+console.log("Computer: " + computerScore + " You: " + humanScore);
+} 
+else if (playerSelection.toLowerCase() == "rock" && computerPlay == "rock") {
+console.log("There was a tie");
+console.log("Computer: " + computerScore + " You: " + humanScore);
+}
+if (playerSelection.toLowerCase() == "scissors" && computerPlay == "paper") {;
+console.log("scissors beats rock! You lost this round.");
+computerScore += 1;
+console.log("Computer: " + computerScore + " You: " + humanScore);
+} 
+else if (playerSelection.toLowerCase() == "rock" && computerPlay == "scissors") {
+console.log("rock beats scissors! You won this round.");
+humanScore += 1;
+console.log("Computer: " + computerScore + " You: " + humanScore);
+} 
+else if (playerSelection.toLowerCase() == "rock" && computerPlay == "rock") {
+console.log("There was a tie");
+console.log("Computer: " + computerScore + " You: " + humanScore);
+}
+    }
+rockpaperscissors()
+    </script>
+</body>
+</html>
+<!-- Your game is going to play against the computer, so begin with a function called computerPlay that will randomly return either 
+    ‘Rock’, ‘Paper’ or ‘Scissors’. We’ll use this function in the game to make the computer’s play. Tip: use the console to make sure 
+    this is returning the expected output before moving to the next step!-->

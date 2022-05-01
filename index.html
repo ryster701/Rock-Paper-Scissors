@@ -31,16 +31,30 @@ console.log("There was a tie");
 console.log("Computer: " + computerScore + " You: " + humanScore);
 }
 if (playerSelection.toLowerCase() == "scissors" && computerPlay == "paper") {;
-console.log("scissors beats rock! You lost this round.");
-computerScore += 1;
-console.log("Computer: " + computerScore + " You: " + humanScore);
-} 
-else if (playerSelection.toLowerCase() == "rock" && computerPlay == "scissors") {
-console.log("rock beats scissors! You won this round.");
+console.log("scissors beats paper! You won this round.");
 humanScore += 1;
 console.log("Computer: " + computerScore + " You: " + humanScore);
 } 
-else if (playerSelection.toLowerCase() == "rock" && computerPlay == "rock") {
+else if (playerSelection.toLowerCase() == "scissors" && computerPlay == "scissors") {
+console.log("There was a tie");
+console.log("Computer: " + computerScore + " You: " + humanScore);
+} 
+else if (playerSelection.toLowerCase() == "scissors" && computerPlay == "rock") {
+console.log("rock beats scissors! You lost this round.");
+computerScore += 1;
+console.log("Computer: " + computerScore + " You: " + humanScore);
+}
+if (playerSelection.toLowerCase() == "paper" && computerPlay == "rock") {;
+console.log("paper beats rock! You won this round.");
+humanScore += 1;
+console.log("Computer: " + computerScore + " You: " + humanScore);
+} 
+else if (playerSelection.toLowerCase() == "paper" && computerPlay == "scissors") {
+console.log("scissors beats paper! You lost this round.");
+computerScore += 1;
+console.log("Computer: " + computerScore + " You: " + humanScore);
+} 
+else if (playerSelection.toLowerCase() == "paper" && computerPlay == "rock") {
 console.log("There was a tie");
 console.log("Computer: " + computerScore + " You: " + humanScore);
 }
